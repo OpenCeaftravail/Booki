@@ -1,4 +1,51 @@
-p {
+/*
+ * Ce fichier contient les styles pour la page d'accueil
+ * Date de création: 3 janvier 2023
+ * Auteur: Mijangos
+ */
+ 
+ /* 
+ * Style général de la page
+ */
+body {
+  
+  p {
     font-family: 'Raleway', sans-serif;
   }
+
+}
+
+/* 
+ * Style de l'en-tête
+ */
+header {
   
+}
+
+/* 
+ * Style du menu de navigation
+ */
+header .nav {
+  
+}
+
+header .nav li {
+  
+}
+
+header .nav a {
+  
+}
+
+/* 
+ * Style du contenu principal
+ */
+
+
+
+/* 
+ * Style du pied de page
+ */
+footer {
+  
+}
