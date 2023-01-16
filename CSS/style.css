@@ -7,40 +7,92 @@
  /* 
  * Style général de la page
  */
-body {
 
-}
-p {
-  font-family: 'Raleway', sans-serif;
-  color: blue;
-}
 /* 
  * Style de l'en-tête
  */
-header {
-  
+ /* Styles généraux */
+ header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  }
+header img {
+  width: 80px;
+  margin-right: 20px;
+}
+header ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+header li {
+  margin-right: 20px;
+}
+header a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
 }
 
-/* 
- * Style du menu de navigation
- */
-header .nav {
-  
+main {
+  padding-left: 20px;
+}
+/* Styles pour la version desktop */
+@media only screen and (min-width: 992px) {
+    header a:hover {
+      border-top: 2px solid blue;
+  }
 }
 
-header .nav li {
-  
+/* Styles pour les écrans de taille moyenne (tablette) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  header a:hover {
+    border-top: 2px solid red;
+  }
 }
 
-header .nav a {
-  
+/* Styles pour la version mobile */
+@media only screen and (max-width: 767px) {
+   header img {
+      width: 50px;
+  }
+  header a:hover {
+      border-bottom: 2px solid blue;
+  }
 }
 
 /* 
  * Style du contenu principal
  */
 
+.conteneur-recherche {
+  display: flex;
+  align-items: center;
+  }
+.form-group{
+  display: flex;
+  align-items: center;
+}
+#icone-recherche {
+  margin-right: 20px;
+}
 
+
+
+
+
+
+
+ body {
+
+ }
+ p {
+   font-family: 'Raleway', sans-serif;
+   color: black;
+ }
 
 /* 
  * Style du pied de page
