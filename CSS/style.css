@@ -7,38 +7,60 @@
  /* 
  * Style général de la page
  */
+ html{
+  background-color: #f2f2f2;
+ }
+ body {
+  max-width: 1400px;
+  margin: auto;
+  background-color: white;
+ }
+ 
+ p {
+   font-family: 'Raleway', sans-serif;
+   color: black;
+ }
 
 /* 
  * Style de l'en-tête
  */
  /* Styles généraux */
+
+
  header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 20px;
+  padding-left: 55px;
+  padding-top: 44px;
   }
 header img {
-  width: 80px;
-  margin-right: 20px;
-}
+  width: 61.09px;
+  height: 19px;
+  }
 header ul {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
+  padding-right: 77px;
   display: flex;
 }
 header li {
-  margin-right: 20px;
+  padding-left: 67px;
+
 }
 header a {
   text-decoration: none;
   color: #000;
-  font-weight: bold;
+  font-weight:500;
+  font-size: 16px;
+  padding-top: 48px;
+}
+
+nav a:active {
+  color: blue;
 }
 
 main {
-  padding-left: 20px;
+  
 }
 /* Styles pour la version desktop */
 @media only screen and (min-width: 992px) {
@@ -68,32 +90,69 @@ main {
  * Style du contenu principal
  */
 
+ #section1 {
+  margin-left: 55px;
+ }
+h1 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-top: 63px;
+  margin-bottom: 8px;
+}
+
 .conteneur-recherche {
   display: flex;
   align-items: center;
-  }
+  
+}
+
 .form-group{
   display: flex;
   align-items: center;
 }
-#icone-recherche {
-  margin-right: 20px;
+
+#ville {
+width: 332px;
+height: 49px;
+border-radius: 15px;
+border: 1px solid #f2f2f2;
+ 
 }
 
+::placeholder {
+  font-weight:700;
+  font-size: 18px;
+  line-height: 21,13px;
+  width: 147px;
+  height: 21px;
+  padding: 14px 72px 14px 17px;
+}
 
+#icone-recherche {
+  padding: 16px 18px 15px 18px;
+  width: 14px;
+  height: 18px;
+  color: #000;
+  background-color: #f2f2f2;
+  border-radius: 15px 0px 0px 15px;
+  border: 1px solid #f2f2f2;
+}
 
+.bouton-recherche {
+  background: #0065FC;
+  border: 1px solid #0065FC;
+  width: 132px;
+  height: 49px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 15px 16px 15px 16px;
+  margin-left: 10px;
+  color: white;
+}
 
-
-
-
- body {
-
- }
- p {
-   font-family: 'Raleway', sans-serif;
-   color: black;
- }
-
+#sectionxyz{
+  margin-top: 700px;
+}
 /* 
  * Style du pied de page
  */
