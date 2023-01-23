@@ -7,9 +7,15 @@
  /* 
  * Style général de la page
  */
+/* Enlever les marges de toutes les balises de la page html */
+ *{
+  margin: 0;
+ }
+
  html{
   background-color: #f2f2f2;
  }
+
  body {
   max-width: 1400px;
   margin: auto;
@@ -32,8 +38,8 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 55px;
-  padding-top: 44px;
-  }
+ }
+
 header img {
   width: 61.09px;
   height: 19px;
@@ -45,6 +51,7 @@ header ul {
 }
 header li {
   padding-left: 67px;
+  padding-top: 48px;
 
 }
 header a {
@@ -52,26 +59,23 @@ header a {
   color: #000;
   font-weight:500;
   font-size: 16px;
-  padding-top: 48px;
+  
 }
 
 nav a:active {
   color: blue;
 }
 
-main {
-  
-}
 /* Styles pour la version desktop */
 @media only screen and (min-width: 992px) {
-    header a:hover {
+    header li:hover {
       border-top: 2px solid blue;
   }
 }
 
 /* Styles pour les écrans de taille moyenne (tablette) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  header a:hover {
+  header li:hover {
     border-top: 2px solid red;
   }
 }
@@ -81,7 +85,7 @@ main {
    header img {
       width: 50px;
   }
-  header a:hover {
+  header li:hover {
       border-bottom: 2px solid blue;
   }
 }
@@ -89,14 +93,16 @@ main {
 /* 
  * Style du contenu principal
  */
-
+ main {
+  
+ }
+ 
  #section1 {
   margin-left: 55px;
  }
 h1 {
   font-weight: 700;
   font-size: 22px;
-  margin-top: 63px;
   margin-bottom: 8px;
 }
 
@@ -113,8 +119,7 @@ h1 {
 
 #ville {
 width: 332px;
-height: 49px;
-border-radius: 15px;
+height: 47px;
 border: 1px solid #f2f2f2;
  
 }
@@ -146,13 +151,68 @@ border: 1px solid #f2f2f2;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   padding: 15px 16px 15px 16px;
-  margin-left: 10px;
-  color: white;
+    color: white;
+}
+/* 
+ * Section 2
+ */
+
+#bloc1 {
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  width: 66.67;
+}
+
+#bloc1 img {
+  width: 246px;
+  height: 124px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+#bloc1 h3 {
+  font-weight: 700;
+  font-size: 16px;
+  font-style: bold;
+  color: #000000;
+  text-align: left;
+  line-height: 100%;
+  vertical-align: top;
+}
+
+#bloc1 p {
+  font-weight: 400;
+  font-size: 14px;
+  font-style: mixed;
+  color: #000000;
+  text-align: left;
+  line-height: 100%;
+  vertical-align: top;
+}
+
+
+#bloc2 {
+  float: right;
+  width: 33.33%;
+}
+
+.blue-star {
+  color: #0065FC;
+  width: 12px;
+  height: 12px;
+}
+
+.gray-star {
+  color: #F2F2F2;
 }
 
 #sectionxyz{
   margin-top: 700px;
 }
+
+
+
+
 /* 
  * Style du pied de page
  */
