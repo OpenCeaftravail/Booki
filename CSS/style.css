@@ -11,9 +11,8 @@
  *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* la bordure est comprise dans la mesure */
  }
-
  html{
   background-color: #f2f2f2;
  }
@@ -37,10 +36,13 @@ a {
   text-decoration: none;
 }
 
-/* 
- * Style de l'en-tête
- */
- /* Styles généraux */
+a:hover {
+  cursor: pointer; /* change le curseur en petite main */
+}
+
+
+
+/* Style de l'en-tête - Styles généraux */
 
 
  header {
@@ -71,7 +73,7 @@ header a {
   
 }
 
-nav a:active {
+header a:active {
   color: blue;
   
 }
@@ -143,11 +145,20 @@ form {
     
 }
 
-
+/* 
+ * Filtre
+ */
 
 .filter-container {
   display: flex;
   
+}
+
+.filter-container ul {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  gap: 2em;
 }
 
 .filter-options {
@@ -156,7 +167,7 @@ form {
   width: 100%;
   font-family: 'Raleway';
   font-style: normal;
-  column-gap: 3em;
+  gap: 2em;
   margin-top: 2em;
   margin-bottom: 2em;
   
@@ -169,33 +180,29 @@ form {
   text-align: center;
 }
 
-.filter-option {
+.filter-options li {
   font-weight: 700;
   line-height: 20px;
   font-size: 17px;
   box-sizing: border-box;
   border: 2px solid #d9d9d9;
   border-radius: 25px;
-  padding: 10px;
+  padding: 5px 10px;
 }
 
-
-.filter-option i {
-  color: #0065FC;
-  margin-right: 10px;
-  width: 22px;
-  height: 22px;
-}
-
-.filter-option:hover {
+.filter-options li:hover {
   background-color: #e6f2ff;
 }
 
-.icon-border {
-  border: 1px solid gray;
-  border-radius: 50%; 
-  padding: 5px;
-  }
+.filter-options i {
+  margin-right: 0.8em;
+}
+
+.filter-container i {
+  color: #0065FC;
+  
+  
+}
 
 
 
@@ -240,8 +247,8 @@ form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 25px;
-  column-gap: 25px;
+  gap: 25px;
+  
 }
 
 .fiche {
@@ -393,7 +400,7 @@ color: #0065FC;
 
 #section3 {
   width: 100%;
-  margin-top: 60px;    
+  margin-top: 60px;
 }
 
 #section3 h2 {
@@ -480,7 +487,7 @@ color: #0065FC;
   margin-top: 30px;
   display: flex; 
   flex-direction: column; /* les liens secondaires en colonne */
-  row-gap: 15px;
+  gap: 15px;
   
 }
 
@@ -493,74 +500,224 @@ color: #0065FC;
 
 
 
-/* Styles pour la version desktop */
+/* Styles pour la version desktop/////////////////////////////////////////////////////// */
+
+
 @media only screen and (min-width: 992px) {
   header li:hover {
-    border-top: 2px solid blue;
+    border-top: 2px solid #0065FC;
 }
 }
 
-/* Styles pour les écrans de taille moyenne (tablette) */
+/* Styles pour les écrans de taille moyenne (tablette)//////////////////////////////////// */
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 header li:hover {
-  border-top: 2px solid red;
+  border-top: 2px solid #0065FC;
+}
+/* /////// */
+
+
+.filter-container ul {
+  gap: 0.5em;
+}
+
+.filter-options {
+  gap: 1em;
+  
+}
+
+.filter-options p {
+  font-size: 15px;
+}
+
+.filter-options li {
+  font-size: 15px;
+}
+
+/* ///////////////////////////// */
+
+
+#section2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+#bloc1 {
+  padding: 10px;
+  width: 100%;
+}
+
+#bloc1 h2 {
+  font-size: 19px;
+}
+
+#bloc1 h3 {
+  font-size: 13px;
+}
+
+#bloc1 p {
+  font-size: 0.8em;
+}
+
+.hebergement {
+  justify-content: space-between;
+  row-gap: 30px;
+  column-gap: 2px;
+}
+
+.fiche {
+  max-width: 221px;
+  }
+
+/* ////////// */
+
+#bloc2 {
+  max-height: auto;
+  max-width: 100%;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 0.6em;
+  margin-top: 20px;
+  
+  }
+
+.titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+
+.titre h2 {
+font-style: normal;
+font-weight: 700;
+font-size: 19px;
+line-height: 26px;
+}
+
+.titre .fa-solid.fa-chart-line {
+width: 1.2em;
+height: 1em;
+color: #0065FC;
+}
+
+.pop {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.fiche2 {
+  height: 7.5em;
+   max-width: 14em;
+}  
+
+.fiche2 img {
+    height: 7.5em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5em;
+}
+
+.info h3 {
+  font-weight: 700;
+  font-size: 13px;
+  font-style: bold;
+  margin-top: 1em;
+}
+
+.info p {
+  font-weight: 600;
+  font-size: 0.8em;
+  margin-bottom: auto;
+}
+
+.info .blue-star {
+  margin-bottom: 1em;
+  margin-right: 0.2em;
+  width: 0.8em;
+}
+
+/* //// SECTION 3 //// */
+
+
+#section3 {
+  width: 100%;
+  margin-top: 60px;
+ 
+}
+
+#section3 h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  
+}
+
+.activite {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+
+#section3 a {
+  text-decoration: none;
+}
+
+
+.fiche3 {
+  height: 15em;
+}
+
+
+.fiche3 img {
+  
+  height: 12.1em;
+}
+
+.fiche3 p {
+  font-weight: 700;
+  font-size: 0.8em;
+  margin-top: auto;
+  margin-left: 5px;
+}
+
+/* //// FOOTER //// */
+
+.footer-col-links a {
+  font-size: 12px;
+  line-height: 15px;
+  
 }
 
 
 
-.filter-container {
-  display: flex;
-  max-width: 100%;
-  
-  }
-  
-  .filter-options {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  
-  width: 100%;
-  column-gap: 0.8em;
-  }
-  
-  .filter-option {
-  display: flex;
-  font-size: 0.9em;
-  padding: auto;
-  }
 
-  #section2 {
-    
-    display: block;
-    
-  }
- 
-
-  #bloc1 {
-  
-    
-    width: 100%;
-    height: 100%;
-    
-    
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 25px;
-    align-items: baseline;
-    
-  }
 
 
 }
 
 /* Styles pour la version mobile */
+
+
+
 @media only screen and (max-width: 767px) {
  header img {
     width: 50px;
 }
 header li:hover {
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid #0065FC;
 
     .filter-option {
       display: flex;
