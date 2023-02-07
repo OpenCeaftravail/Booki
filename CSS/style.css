@@ -312,7 +312,7 @@ form {
   padding: 1.5em;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 45px;
   }
 
 .titre {
@@ -335,7 +335,12 @@ height: 1em;
 color: #0065FC;
 }
 
-
+.pop {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
 
 .fiche2 {
     background-color: #ffff;
