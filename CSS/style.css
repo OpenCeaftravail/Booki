@@ -36,11 +36,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  cursor: pointer; /* change le curseur en petite main */
-}
-
-
 
 /* Style de l'en-tête - Styles généraux */
 
@@ -48,29 +43,33 @@ a:hover {
  header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  height: 50px;
  }
 
 header img {
   width: 3.85;
   height: 1.2em;
-  margin-top: 3em;
+  align-self: flex-end;
   }
 header ul {
   list-style: none;
   display: flex;
+  height: 100%;
 }
 
 header li {
   width: 10em;
-  text-align: center;
-  padding-top: 3em;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }
 header a {
   color: #000;
   font-weight:500;
   font-size: 1em;
-  
+  display: flex;  /* pour permettre de transformer une balise inline en block pour prendre 100% du contenur + rajouter height: 100% */
+  height: 100%;
+  align-items: flex-end;
 }
 
 header a:active {
@@ -111,6 +110,7 @@ form {
 #ville {
   width: 332px;
   border: 1px solid #f2f2f2;
+  padding-left: 10px;
  
 }
 
@@ -118,8 +118,9 @@ form {
   font-weight:700;
   font-size: 18px;
   line-height: 49px;
-  padding-left: 15px;
 }
+
+
 
 #icone-recherche {
   padding: 16px 18px 15px 18px;
@@ -181,6 +182,7 @@ form {
   border: 2px solid #d9d9d9;
   border-radius: 25px;
   padding: 5px 10px;
+  cursor: pointer;
 }
 
 .filter-options li:hover {
@@ -197,7 +199,9 @@ form {
   
 }
 
-
+.fa-circle-info {
+  margin-right: .5em;
+}
 
 
 
@@ -240,8 +244,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 25px;
-  
+  gap: 1em;
 }
 
 .fiche {
@@ -250,6 +253,8 @@ form {
   height: 199px;
   border-radius: 20px;
   box-shadow: 0px 4px 16px 0 rgba(0, 0, 0, 0.13); 
+  flex-shrink: 1;
+  flex-grow: 1;
   }
 
 .fiche:hover {
@@ -313,6 +318,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 45px;
+  
   }
 
 .titre {
@@ -346,10 +352,11 @@ color: #0065FC;
     background-color: #ffff;
     width: 100%;
     height: 9em;
-    max-width: 334px;
     border-radius: 20px;
     display: flex;
     box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.13);
+    flex-grow: 1;
+    flex-shrink: 1;
 }  
 
 .fiche2:hover {
@@ -618,7 +625,7 @@ color: #0065FC;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  margin-top: 20px;
+  
 }
 
 .fiche2 {
@@ -772,26 +779,27 @@ header li {
 }
 
 #section1 h1 {
-  margin-top: 0;
+  display: flex;
   font-size: 1.2em;
 }
 
 .conteneur-recherche {
-  border: 1px solid blue;
   width: 100%;
-  display: inline-flex;
+  display: flex;
   justify-content:flex-start;
-  overflow: hidden;
+  overflow: hidden;  
 }
 
 
 #ville {
-  border: 1px solid green;
-  width: 17.9em;
+  display: flex;
+  flex-grow: 1;
+  max-width: 51%;
 }
 
 ::placeholder {
-  font-size: 1.4em;
+  font-size: 1.3em;
+  flex-grow: 1;
 }
 
 .bouton-recherche {
@@ -820,21 +828,21 @@ header li {
 
 .filter-options p {
   text-align:left;
+  display: flex;
 }
 
 .filter-options ul {
   margin-top: 10px;
   display:flex;
   flex-wrap: wrap;
-  
   width: 100%;
-  gap: 14px;
-  
+  gap: 0.8em;
 }
 
 .filter-option {
-  width: 48%;
+  width: 40%;
   float:left;
+  flex-grow: 1;
 }
 
 .filter-options p {
@@ -864,6 +872,7 @@ header li {
   width: 100%;
   background-color: white;
   border-radius: 0;
+  gap: 1em;
 }
 
 #bloc1 h2 {
@@ -925,14 +934,12 @@ color: #0065FC;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-   margin-top: 20px;
-   gap: 10px;
+  gap: 10px;
 }
 
 .fiche2 {
   height: 7.5em;
-  width: 400px;
+  width: 100%;
 
 }  
 
@@ -970,9 +977,8 @@ color: #0065FC;
 
 #section3 {
   width: 100%;
-  margin-top: 60px;
   padding: 2em;
- 
+  margin-top: 0; 
 }
 
 #section3 h2 {
@@ -1023,7 +1029,7 @@ color: #0065FC;
 #footer-links {
   display: flex;
   flex-direction: column;
-  
+  gap: 1.5em;
 }
 
 .footer-col {
@@ -1038,6 +1044,7 @@ color: #0065FC;
 .footer-col-links a {
   font-size: 12px;
   line-height: 15px;
+
 }
 
 
