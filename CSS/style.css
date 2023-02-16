@@ -17,9 +17,12 @@
   background-color: #f2f2f2;
  }
 
+ button[type="submit"], input[type="submit"] {
+  cursor: pointer;
+}
+
  body {
   max-width: 1400px;
-  
   margin: auto;
   background-color: white;
   min-height: 100vh; /* vh = viewport height 100% de la hauteur de l'écran */
@@ -43,7 +46,8 @@ a {
  header {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: auto;
+  min-height: 50px;
  }
 
 header img {
@@ -60,8 +64,6 @@ header ul {
 header li {
   width: 10em;
   display: flex;
-  align-items: end;
-  justify-content: center;
 }
 header a {
   color: #000;
@@ -69,12 +71,13 @@ header a {
   font-size: 1em;
   display: flex;  /* pour permettre de transformer une balise inline en block pour prendre 100% du contenur + rajouter height: 100% */
   height: 100%;
+  width: 100%;
   align-items: flex-end;
+  justify-content: center;
 }
 
 header a:active {
   color: blue;
-  
 }
 
 
@@ -90,17 +93,15 @@ header a:active {
 h1 {
   font-weight: 700;
   font-size: 1.3em;
-  margin-top: 3em;
+  margin-top: 0.5em;
   margin-bottom: 0.3em;
-
 }
 
 .conteneur-recherche {
   display: flex;
   align-items: center;
   height: 49px;
-  margin-top: 1em;
-  
+  margin-top: 1em;  
 }
 
 form {
@@ -110,8 +111,7 @@ form {
 #ville {
   width: 332px;
   border: 1px solid #f2f2f2;
-  padding-left: 10px;
- 
+  padding-left: 10px; 
 }
 
 ::placeholder {
@@ -135,8 +135,7 @@ form {
   width: 132px;
   height: 49px;
   border-radius: 0px 15px 15px 0px;
-  color: white;
-    
+  color: white;    
 }
 
 /* 
@@ -145,7 +144,6 @@ form {
 
 .filter-container {
   display: flex;
-  
 }
 
 .filter-container ul {
@@ -164,7 +162,6 @@ form {
   gap: 2em;
   margin-top: 2em;
   margin-bottom: 2em;
-  
 }
 
 .filter-options p {
@@ -195,8 +192,6 @@ form {
 
 .filter-container i {
   color: #0065FC;
-  
-  
 }
 
 .fa-circle-info {
@@ -212,10 +207,8 @@ form {
 #section2 {
   width: 100%;
   margin-top: 2em;
-  max-height 600px;
   display: flex;
   justify-content: space-between;
-  
 }
 
 
@@ -230,9 +223,8 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
   align-items: baseline;
-  
+  gap: 10px;
 }
 
 #bloc1 h2 {
@@ -356,7 +348,6 @@ color: #0065FC;
     display: flex;
     box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.13);
     flex-grow: 1;
-    flex-shrink: 1;
 }  
 
 .fiche2:hover {
@@ -732,6 +723,7 @@ color: #0065FC;
  header img {
     width: 50px;
 }
+
 header li:hover {
     border-bottom: 2px solid #0065FC;
 
@@ -747,9 +739,7 @@ body {
 }
 
 header {
-  padding-top: 1.8em;
   display: block;
-  
  }
 
 header img {
